@@ -1,16 +1,17 @@
 // We should create a function which returns a promise 
 import axios from "axios";
+import { rootApi } from "../../api";
 
-const URL = "https://gentle-ridge-36337.herokuapp.com/api/posts";
+
 
 // Get all posts 
 const getPosts = () => {
-    return axios.get(URL);
+    return axios.get(rootApi + "/posts");
 };
 
 // Get only one post 
 const getPost = (id) => {
-    return axios.get(`${URL}/${id}`);
+    return axios.get(`${rootApi}/posts/${id}`);
 }
 
 export default {
