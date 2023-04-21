@@ -8,7 +8,14 @@ export const authService = () => {
             `${rootApi}/auth/register`, userData)
     }
 
+    const login = (loginData)  => {
+        return axios.post
+        (`${rootApi}/auth/login`, loginData);
+    }
     return {
         registration,
+        login
     }
     }
+
+
